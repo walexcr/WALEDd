@@ -20,6 +20,15 @@
       border-radius: 10px;
       border: 2px solid #0f172a;
     }
+
+    /* Slider Animation */
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-slide {
+      animation: slide 25s linear infinite;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-black via-blue-900 to-black text-white font-sans">
@@ -80,23 +89,23 @@
   <section id="skills" class="max-w-7xl mx-auto px-6 py-20 text-center">
     <h2 class="text-3xl font-bold mb-12 text-blue-400">My Skills</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      <!-- Skill Card 1 -->
+      <!-- Photoshop -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-blue-600 transition-shadow duration-300 cursor-default">
-        <div class="mb-4 flex justify-center text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-12 h-12" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+        <div class="mb-4 flex justify-center">
+          <img src="images/photoshop.png" alt="Photoshop" class="w-12 h-12">
         </div>
         <h3 class="text-xl font-semibold mb-1">Adobe Photoshop</h3>
         <p class="text-gray-400">Halftone, Color Separation</p>
       </div>
-      <!-- Skill Card 2 -->
+      <!-- Illustrator -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-orange-500 transition-shadow duration-300 cursor-default">
-        <div class="mb-4 flex justify-center text-orange-400">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-12 h-12" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+        <div class="mb-4 flex justify-center">
+          <img src="images/illustrator.png" alt="Illustrator" class="w-12 h-12">
         </div>
         <h3 class="text-xl font-semibold mb-1">Adobe Illustrator</h3>
         <p class="text-gray-400">Vector Artwork, Design</p>
       </div>
-      <!-- Skill Card 3 -->
+      <!-- Silk Screen -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-green-600 transition-shadow duration-300 cursor-default">
         <div class="mb-4 flex justify-center text-green-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-12 h-12" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
@@ -104,7 +113,7 @@
         <h3 class="text-xl font-semibold mb-1">Silk Screen Printing Techniques</h3>
         <p class="text-gray-400">Printing Techniques</p>
       </div>
-      <!-- Skill Card 4 -->
+      <!-- Prepress -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-purple-600 transition-shadow duration-300 cursor-default">
         <div class="mb-4 flex justify-center text-purple-400">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-12 h-12" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
@@ -118,66 +127,63 @@
   <!-- Portfolio Section -->
   <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20">
     <h2 class="text-3xl font-bold mb-12 text-blue-400 text-center">Selected Works</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <!-- Portfolio Card 1 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro1.jpeg" alt="Project 1" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-          <p class="text-gray-400 flex-grow">Precise color separations for high-quality screen printing.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
 
-      <!-- Portfolio Card 2 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro2.jpeg" alt="Project 2" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-          <p class="text-gray-400 flex-grow">Creative halftone effects for unique prints.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
+    <div class="overflow-hidden relative">
+      <div class="flex animate-slide space-x-6">
+        <!-- Project 1 -->
+        <a href="images/pro1.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro1.jpeg" alt="Project 1" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 1</h3>
+            <p class="text-gray-400 text-sm">Precise color separations for high-quality screen printing.</p>
+          </div>
+        </a>
 
-      <!-- Portfolio Card 3 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro3.jpeg" alt="Project 3" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 3</h3>
-          <p class="text-gray-400 flex-grow">Clean vector designs for fashion and branding.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
+        <!-- Project 2 -->
+        <a href="images/pro2.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro2.jpeg" alt="Project 2" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 2</h3>
+            <p class="text-gray-400 text-sm">Creative halftone effects for unique prints.</p>
+          </div>
+        </a>
 
-      <!-- Portfolio Card 4 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro4.jpeg" alt="Project 4" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 4</h3>
-          <p class="text-gray-400 flex-grow">Advanced silk screen techniques and designs.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
+        <!-- Project 3 -->
+        <a href="images/pro3.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro3.jpeg" alt="Project 3" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 3</h3>
+            <p class="text-gray-400 text-sm">Clean vector designs for fashion and branding.</p>
+          </div>
+        </a>
 
-      <!-- Portfolio Card 5 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro5.jpeg" alt="Project 5" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 5</h3>
-          <p class="text-gray-400 flex-grow">Print-ready artwork with professional quality.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
+        <!-- Project 4 -->
+        <a href="images/pro4.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro4.jpeg" alt="Project 4" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 4</h3>
+            <p class="text-gray-400 text-sm">Advanced silk screen techniques and designs.</p>
+          </div>
+        </a>
 
-      <!-- Portfolio Card 6 -->
-      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300 flex flex-col">
-        <img src="images/pro6.jpeg" alt="Project 6" class="w-full h-48 object-cover" />
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Project 6</h3>
-          <p class="text-gray-400 flex-grow">Unique designs crafted for brand identity.</p>
-          <button onclick="alert('Details coming soon!')" class="mt-4 self-start bg-blue-600 hover:bg-blue-700 transition-colors duration-300 rounded-full px-5 py-2 font-semibold cursor-pointer">View Details</button>
-        </div>
-      </article>
+        <!-- Project 5 -->
+        <a href="images/pro5.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro5.jpeg" alt="Project 5" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 5</h3>
+            <p class="text-gray-400 text-sm">Print-ready artwork with professional quality.</p>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="images/pro6.jpeg" target="_blank" class="flex-shrink-0 w-72 bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-600 transition-shadow duration-300">
+          <img src="images/pro6.jpeg" alt="Project 6" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Project 6</h3>
+            <p class="text-gray-400 text-sm">Unique designs crafted for brand identity.</p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -207,3 +213,4 @@
 
 </body>
 </html>
+Update portfolio section
